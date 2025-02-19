@@ -1,8 +1,7 @@
-import {CAMPSITES} from "../../app/shared/CAMPSITES";
+import { CAMPSITES } from "../../app/shared/CAMPSITES";
 
 export const selectAllCampsites = () => CAMPSITES;
 
-const selectRandomCampsite = () => {
-
-    return CAMPSITES[Math.floor(Math.random() * CAMPSITES.length)];
+export const selectRandomCampsite = () => {
+  return CAMPSITES[Math.floor(Math.random() * CAMPSITES.length)];
 };
