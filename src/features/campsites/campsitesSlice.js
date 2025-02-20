@@ -6,7 +6,7 @@ export const selectAllCampsites = () => CAMPSITES;
 //   return CAMPSITES[Math.floor(Math.random() * CAMPSITES.length)];
 // };
 export const selectCampsiteById = (id) => {
-  return CAMPSITES.find((campsite) => campsite.id === id);
+  return CAMPSITES.find((campsite) => campsite.id === parseInt(id));
 };
 
 export const selectFeaturedCampsite = () => {
