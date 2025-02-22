@@ -16,7 +16,7 @@ const AboutPage = () => {
             reviews on campsites they have visited with each other.
           </p>
         </Col>
-        <Col>
+        <Col sm="6">
           <Card>
             <CardHeader className="bg-primary text-white">
               <h3>Facts at a Glance</h3>
