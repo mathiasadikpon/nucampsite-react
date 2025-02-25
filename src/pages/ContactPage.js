@@ -5,11 +5,11 @@ const ContactPage = () => {
   return (
     <Container>
       <SubHeader current="Contact Us" />
+
       <Row className="row-content align-items-center">
         <Col sm="4">
           <h5>Our Address</h5>
           <address>
-            {" "}
             1 Nucamp Way
             <br />
             Seattle, WA 98001
@@ -17,9 +17,7 @@ const ContactPage = () => {
             U.S.A.
           </address>
         </Col>
-
         <Col>
-          {" "}
           <a role="button" className="btn btn-link" href="tel:+12065551234">
             <i className="fa fa-phone" /> 1-206-555-1234
           </a>
