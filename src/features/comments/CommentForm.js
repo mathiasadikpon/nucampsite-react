@@ -15,6 +15,18 @@ import React from "react";
 const CommentForm = ({ campsiteId }) => {
   const [modalOpen, setModalOpen] = useState(false);
 
+  const handleSubmit = (values) => {
+    const comment = {
+      id: values.id,
+      campsiteId: parseInt(campsiteId),
+      rating: parseInt(values.rating),
+      text: values.commentText,
+      author: values.author,
+    };
+    console.log(comment);
+    setModalOpen (false);
+  };
+
   return (
     <>
       <Button outline onClick={() => setModalOpen(true)}>
