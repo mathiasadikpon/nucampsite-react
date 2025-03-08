@@ -12,10 +12,13 @@ import { Formik, Field, Form, ErrorMessage } from "formik";
 import { validateCommentForm } from "../../utils/validateCommentForm";
 
 import React from "react";
+import { useDispatch } from "react-redux";
+import { addComment } from "./commentsSlice";
+
 // rafce shortcut
 const CommentForm = ({ campsiteId }) => {
   const [modalOpen, setModalOpen] = useState(false);
-
+  const dispatch = useDispatch();
   const handleSubmit = (values) => {
     const comment = {
       id: values.id,
@@ -23,8 +26,10 @@ const CommentForm = ({ campsiteId }) => {
       rating: parseInt(values.rating),
       text: values.commentText,
       author: values.author,
+      date: new Date(Date.now()).toISOString(),
     };
     console.log(comment);
+    dispatch(addComment(comment));
     setModalOpen(false);
   };
 
