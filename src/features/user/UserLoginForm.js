@@ -62,7 +62,7 @@ const UserLoginForm = () => {
           >
             <Form>
               <FormGroup>
-                <Label htmlFor="username">Username</Label>{" "}
+                <Label htmlFor="username">Username</Label>
                 <Field
                   id="username"
                   name="username"
