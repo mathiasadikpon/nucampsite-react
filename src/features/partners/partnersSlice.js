@@ -1,8 +1,11 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { PARTNERS } from "../../app/shared/PARTNERS";
+import { createSlice , createAsyncThunk} from "@reduxjs/toolkit";
+// import { PARTNERS } from "../../app/shared/PARTNERS";
+import {baseUrl} from "../../app/shared/baseUrl";
+import { mapImageURL } from "../../utils/mapImageURL";
+
 
 const initialState = {
-  partnersArray: PARTNERS,
+  partnersArray: [],
 };
 
 const partnersSlice = createSlice({
