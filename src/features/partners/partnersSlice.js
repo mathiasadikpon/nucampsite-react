@@ -18,6 +18,8 @@ export const fetchPartners = createAsyncThunk(
 
 const initialState = {
   partnersArray: [],
+  isLoading: true,
+  errMsg: "",
 };
 
 const partnersSlice = createSlice({
