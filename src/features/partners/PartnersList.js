@@ -1,9 +1,9 @@
-import { Col } from "reactstrap";
+import { Col, Row } from "reactstrap";
 import Partner from "./Partner";
 import { selectAllPartners } from "./partnersSlice";
 import { useSelector } from "react-redux";
-import { Error } from "../../components/Error";
-import { Loading } from "../../components/Loading";
+import Error from "../../components/Error";
+import Loading from "../../components/Loading";
 
 const PartnersList = () => {
   const partners = useSelector(selectAllPartners);
