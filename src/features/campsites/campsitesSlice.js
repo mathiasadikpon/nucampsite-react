@@ -1,5 +1,7 @@
-import { createSlice } from "@reduxjs/toolkit";
-import { CAMPSITES } from "../../app/shared/CAMPSITES";
+import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
+//import { CAMPSITES } from "../../app/shared/CAMPSITES";
+import { baseUrl } from "../../app/shared/baseUrl";
+import { mapImageURL } from "../../utils/mapImageURL";
 
 const initialState = {
   campsitesArray: CAMPSITES,
@@ -16,8 +18,10 @@ export const selectAllCampsites = (state) => {
   return state.campsites.campsitesArray;
 };
 
-export const selectCampsiteById = (id) =>(state)=> {
-  return state.campsites.campsitesArray.find((campsite) => campsite.id === parseInt(id));
+export const selectCampsiteById = (id) => (state) => {
+  return state.campsites.campsitesArray.find(
+    (campsite) => campsite.id === parseInt(id)
+  );
 };
 
 export const selectFeaturedCampsite = (state) => {
