@@ -8,20 +8,22 @@ import CampsitesDirectoryPage from "./pages/CampsitesDirectoryPage";
 
 import HomePage from "./pages/HomePage";
 import ContactPage from "./pages/ContactPage";
-import CampsiteDetailPage from './pages/CampsiteDetailPage';
+import CampsiteDetailPage from "./pages/CampsiteDetailPage";
 
 import { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { fetchCampsites } from "./features/campsites/campsitesSlice";
 import { fetchPartners } from "./features/partners/partnersSlice";
+import { fetchPromotions } from "./features/promotions/promotionsSlice";
 
 function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchCampsites());
-    dispatch(fetchPartners())
+    dispatch(fetchPartners());
+    dispatch(fetchPromotions());
   }, [dispatch]);
-  
+
   return (
     <div className="App">
       <Header />
@@ -30,7 +32,7 @@ function App() {
         <Route path="contact" element={<ContactPage />} />
         <Route path="directory" element={<CampsitesDirectoryPage />} />
         <Route path="directory/:campsiteId" element={<CampsiteDetailPage />} />
-        <Route path="about" element={<AboutPage />}/>
+        <Route path="about" element={<AboutPage />} />
       </Routes>
       <Footer />
     </div>
