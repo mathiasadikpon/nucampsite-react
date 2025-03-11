@@ -17,6 +17,8 @@ export const fetchCampsites = createAsyncThunk(
 
 const initialState = {
   campsitesArray: [],
+  isLoading: true,
+  errMsg: "",
 };
 
 const campsitesSlice = createSlice({
